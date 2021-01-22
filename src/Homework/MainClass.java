@@ -21,7 +21,7 @@ public class MainClass {
                 }
                if (result==true) {
                    System.out.println("Успех!");
-               }
+               }//s
             }
         }
     }
