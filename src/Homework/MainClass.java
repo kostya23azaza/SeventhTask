@@ -13,15 +13,15 @@ public class MainClass {
         barriers[0] = new Wall(random.nextInt(10));
         barriers[1] = new Road(random.nextInt(10));
         boolean result = true;
-        for (int i = 0; i <actions.length ; i++) {
-            for (int j = 0; j <barriers.length ; j++) {
-             result= barriers[j].moving(actions[i]);
+        for (Actions action : actions) {
+            for (Barrier barrier : barriers) {
+                result = barrier.moving(action);
                 if (result == false) {
                     break;
                 }
-               if (result==true) {
-                   System.out.println("Успех!");
-               }//s
+                if (result == true) {
+                    System.out.println("Успех!");
+                }//s
             }
         }
     }
